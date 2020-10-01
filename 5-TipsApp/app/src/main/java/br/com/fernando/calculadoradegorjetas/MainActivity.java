@@ -6,6 +6,7 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -69,15 +70,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void calculateValues() {
 
-        ///etCheckValue, etTip, etTotal;
-         // private SeekBar sbPercentage;
         int percentage = sbPercentage.getProgress();
         tvPercentageValue.setText(percentage*10 + "%");
 
         String checkInput = etCheckValue.getText().toString();
-        if(checkInput.equals("") || checkInput.equals(null) || percentage == 0){
+        if(checkInput.equals("") || checkInput == null || percentage == 0){
             etTip.setText(getString(R.string.monetary_value, "0.0"));
             etTotal.setText(getString(R.string.monetary_value, "0.0"));
+            Toast.makeText(this, "Digite um Valor primeiro!", Toast.LENGTH_SHORT).show();
             return;
         }
 
