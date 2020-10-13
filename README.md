@@ -24,6 +24,7 @@ Developed projects to study Android
 <img src="./.github/mobile5.png" width="250" />
 <img src="./.github/mobile6.png" width="250" />
 <img src="./.github/mobile7.png" width="250" />
+<img src="./.github/mobile8.png" width="250" />
 </div>
 
 ## :computer: Technologies
